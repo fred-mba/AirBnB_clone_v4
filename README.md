@@ -157,6 +157,5 @@ No known bugs at this time.
 Fredrick Mbanga - [Github](https://github.com/fred-mba/) / [email](fredrickmbangah68@gmail.com)  
 Noel Reeds - [Github](https://github.com/noel-reeds) / [email](noelreeds@gmail.com)  
 
-Second part of Airbnb: Joann Vuong
 ## License
 Public Domain. No copy write protection. 
