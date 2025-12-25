@@ -31,12 +31,12 @@ $(function () {
     dataType: 'json'
   })
   .done(function () {
-    $('#api_status').addClass('available');
+    $('#api_status').addClass('available')
   })
   .fail(function () {
-    $('#api_status').removeClass('available');
+    $('#api_status').removeClass('available')
   })
   .always(function () {
     console.log("API check is complete!");
-  })
+  });
 });
