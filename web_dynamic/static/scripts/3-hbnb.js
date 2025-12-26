@@ -27,21 +27,6 @@ $(function () {
     }
   });
 
-  $.ajax({
-    url: 'http://localhost:5001/api/v1/status/',
-    method: 'GET',
-    dataType: 'json'
-  })
-  .done(function () {
-    $('#api_status').addClass('available')
-  })
-  .fail(function () {
-    $('#api_status').removeClass('available');
-  })
-  .always(function () {
-    console.log("API check is complete!");
-  })
-
   /*---- Places are now loaded from the frontend not from the backend ----*/
   $.ajax({
     url: 'http://localhost:5001/api/v1/places_search/',
@@ -50,6 +35,7 @@ $(function () {
     dataType: 'json',
     data: JSON.stringify({}),
     success: function(response) {
+      console.log(response.length)
       response.forEach(function(place) {
         $('<article>')
           .html(`
@@ -69,5 +55,21 @@ $(function () {
           .appendTo('section.places')
       });
     }
-  });
+  })
+  .done(function() {
+    return $.ajax({
+      url: 'http://localhost:5001/api/v1/status/',
+      method: 'GET',
+      dataType: 'json'
+    })
+    .done(function () {
+      $('#api_status').addClass('available')
+    })
+    .fail(function () {
+      $('#api_status').removeClass('available');
+    })
+    .always(function () {
+      console.log("API check is complete!");
+    })
+  })
 });
