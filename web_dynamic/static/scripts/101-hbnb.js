@@ -89,8 +89,6 @@ $(function () {
           dataType: 'json'
         });
 
-        console.log('First response', response[0].user);
-
         $reviewList.empty(); // Delete any existing reviews and add new ones
 
         if (response.length === 0) {
