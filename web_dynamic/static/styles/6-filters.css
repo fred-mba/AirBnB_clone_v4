@@ -101,3 +101,25 @@ button:hover {
 .locations:hover .popover {
     visibility: visible;
 }
+
+.reviews {
+    margin-top: 40px;
+    width: 100%;
+}
+
+.reviews .review_title {
+    font-size: 16px;
+    text-align: left;
+    width: 100%;
+    border-bottom: 1px solid #DDDDDD;
+    padding: 0px;
+    margin: 0px;
+    padding-bottom: 10px;
+}
+
+.reviews-toggle {
+    margin-left: 10px;
+    color: blue;
+    cursor: pointer;
+    font-size: 14px;
+}
